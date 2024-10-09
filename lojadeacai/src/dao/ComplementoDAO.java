@@ -14,7 +14,7 @@ public class ComplementoDAO {
     public void cadastrarComplemento(Complemento c) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "INSERT INTO COMPLEMENTOS (Codigo_Complemento, Nome_Complemento, Preco_Adicional) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO COMPLEMENTOS (CodigoComplemento, NomeComplemento, PrecoAdicional) VALUES (?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, c.getCodigo());
             pst.setString(2, c.getNome());
@@ -35,9 +35,9 @@ public class ComplementoDAO {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Complemento c = new Complemento();
-                c.setCodigo(rs.getInt("Codigo_Complemento"));
-                c.setNome(rs.getString("Nome_Complemento"));
-                c.setPrecoAdicional(rs.getDouble("Preco_Adicional"));
+                c.setCodigo(rs.getInt("CodigoComplemento"));
+                c.setNome(rs.getString("NomeComplemento"));
+                c.setPrecoAdicional(rs.getDouble("PrecoAdicional"));
                 complementos.add(c);
             }
         } catch (SQLException e) {
@@ -55,9 +55,9 @@ public class ComplementoDAO {
             pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                c.setCodigo(rs.getInt("Codigo_Complemento"));
-                c.setNome(rs.getString("Nome_Complemento"));
-                c.setPrecoAdicional(rs.getDouble("Preco_Adicional"));
+                c.setCodigo(rs.getInt("CodigoComplemento"));
+                c.setNome(rs.getString("NomeComplemento"));
+                c.setPrecoAdicional(rs.getDouble("PrecoAdicional"));
             }
         } catch (SQLException e) {
             System.out.println("Erro ao buscar Complemento. \n" + e.getMessage());
@@ -68,7 +68,7 @@ public class ComplementoDAO {
     public void atualizarComplemento(Complemento c) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "UPDATE COMPLEMENTOS SET Nome_Complemento = ?, Preco_Adicional = ? WHERE Codigo_Complemento = ?";
+            String sql = "UPDATE COMPLEMENTOS SET NomeComplemento = ?, PrecoAdicional = ? WHERE CodigoComplemento = ?";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, c.getNome());
             pst.setDouble(2, c.getPrecoAdicional());

@@ -2,6 +2,7 @@ package servicos;
 
 import dao.ClienteDAO;
 import dao.DAOFactory;
+import java.util.ArrayList;
 import model.Cliente;
 
 public class ClienteServicos {
@@ -30,7 +31,7 @@ public class ClienteServicos {
     }
 
     public void atualizarCliente(Cliente cliente) {
-        if (cliente != null && cliente.getId() > 0) {
+        if (cliente != null && cliente.getCodigo()> 0) {
             clienteDAO.atualizarCliente(cliente);
             System.out.println("Cliente atualizado com sucesso.");
         } else {

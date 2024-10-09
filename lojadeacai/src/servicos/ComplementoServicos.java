@@ -13,7 +13,7 @@ public class ComplementoServicos {
     }
 
     public void cadastrarComplemento(Complemento complemento) {
-        if (complemento != null && complemento.getNomeComplemento() != null && !complemento.getNomeComplemento().isEmpty()) {
+        if (complemento != null && complemento.getNome() != null && !complemento.getNomeComplemento().isEmpty()) {
             complementoDAO.cadastrarComplemento(complemento);
             System.out.println("Complemento cadastrado com sucesso.");
         } else {
@@ -30,7 +30,7 @@ public class ComplementoServicos {
     }
 
     public void atualizarComplemento(Complemento complemento) {
-        if (complemento != null && complemento.getCodigoComplemento() > 0) {
+        if (complemento != null && complemento.getCodigo()> 0) {
             complementoDAO.atualizarComplemento(complemento);
             System.out.println("Complemento atualizado com sucesso.");
         } else {

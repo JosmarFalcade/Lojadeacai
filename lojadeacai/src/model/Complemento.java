@@ -1,6 +1,7 @@
 package model;
 
 public class Complemento {
+
     private int codigo;
     private String nome;
     private double precoAdicional;
