@@ -2,23 +2,16 @@ package servicos;
 
 import dao.ComplementoDAO;
 import dao.DAOFactory;
+import java.util.ArrayList;
 import model.Complemento;
 
 public class ComplementoServicos {
 
-    private ComplementoDAO complementoDAO;
+    private ComplementoDAO complementoDAO = DAOFactory.getComplementoDAO();
 
-    public ComplementoServicos() {
-        this.complementoDAO = DAOFactory.getComplementoDAO();
-    }
 
     public void cadastrarComplemento(Complemento complemento) {
-        if (complemento != null && complemento.getNome() != null && !complemento.getNomeComplemento().isEmpty()) {
-            complementoDAO.cadastrarComplemento(complemento);
-            System.out.println("Complemento cadastrado com sucesso.");
-        } else {
-            System.out.println("Erro: Dados do complemento inválidos.");
-        }
+        complementoDAO.cadastrarComplemento(complemento);
     }
 
     public ArrayList<Complemento> listarComplementos() {
@@ -30,19 +23,14 @@ public class ComplementoServicos {
     }
 
     public void atualizarComplemento(Complemento complemento) {
-        if (complemento != null && complemento.getCodigo()> 0) {
-            complementoDAO.atualizarComplemento(complemento);
-            System.out.println("Complemento atualizado com sucesso.");
-        } else {
-            System.out.println("Erro: Dados do complemento inválidos.");
-        }
+
+        complementoDAO.atualizarComplemento(complemento);
+
     }
 
     public boolean deletarComplemento(int id) {
-        if (id > 0) {
+     
             return complementoDAO.deletarComplemento(id);
-        }
-        System.out.println("Erro: ID do complemento inválido.");
-        return false;
+      
     }
 }

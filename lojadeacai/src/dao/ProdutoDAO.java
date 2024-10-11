@@ -35,11 +35,8 @@ public class ProdutoDAO {
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                Produto p = new produto();
-                p.setCodigo(rs.getInt("Codigo_Produto"));
-                p.setNome(rs.getString("Nome_Produto"));
-                p.setPreco(rs.getDouble("Preco"));
-                p.setTipoProduto(rs.getString("Tipo_Produto"));
+                Produto p = new Produto( rs.getInt("Codigo_Produto"), rs.getString("Nome_Produto"), rs.getDouble("Preco"), rs.getString("Tipo_Produto"));
+                
                 produtos.add(p);
             }
         } catch (SQLException e) {

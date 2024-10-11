@@ -2,6 +2,7 @@ package servicos;
 
 import dao.DAOFactory;
 import dao.VendaDAO;
+import java.util.ArrayList;
 import model.Venda;
 
 public class VendaServicos {
@@ -30,20 +31,14 @@ public class VendaServicos {
     }
 
     public void atualizarVenda(Venda venda) {
-        if (venda != null && venda.getCodigoVenda() > 0) {
-            vendaDAO.atualizarVenda(venda);
-            System.out.println("Venda atualizada com sucesso.");
-        } else {
-            System.out.println("Erro: Dados da venda inválidos.");
-        }
+
+        vendaDAO.atualizarVenda(venda);
+
     }
 
     public boolean deletarVenda(int codigoVenda) {
-        if (codigoVenda > 0) {
-            return vendaDAO.deletarVenda(codigoVenda);
-        }
-        System.out.println("Erro: ID da venda inválido.");
-        return false;
+
+        return vendaDAO.deletarVenda(codigoVenda);
+
     }
 }
-

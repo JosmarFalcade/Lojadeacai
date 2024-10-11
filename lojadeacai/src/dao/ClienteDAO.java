@@ -35,12 +35,15 @@ public class ClienteDAO {
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                Cliente c = new Cliente();
-                c.setCodigo(rs.getInt("Codigo_Cliente"));
-                c.setNome(rs.getString("Nome_Cliente"));
-                c.setTelefone(rs.getString("Telefone"));
-                c.setEndereco(rs.getString("Endereco"));
+                Cliente c = new Cliente( rs.getInt("Codigo_Cliente"), rs.getString("Nome_Cliente"), rs.getString("Telefone"), rs.getString("Endereco"));
+                
                 clientes.add(c);
+//                Cliente c = new Cliente();
+//                c.setCodigo(rs.getInt("Codigo_Cliente"));
+//                c.setNome(rs.getString("Nome_Cliente"));
+//                c.setTelefone(rs.getString("Telefone"));
+//                c.setEndereco(rs.getString("Endereco"));
+//                clientes.add(c);
             }
         } catch (SQLException e) {
             System.out.println("Erro ao listar Clientes. \n" + e.getMessage());

@@ -4,6 +4,11 @@ public class VendaProdutos {
     private int codigoProduto;
     private int quantidade;
 
+    public VendaProdutos() {
+    }
+    
+    
+
     public VendaProdutos(int codigoVenda, int codigoProduto, int quantidade) {
         this.codigoVenda = codigoVenda;
         this.codigoProduto = codigoProduto;

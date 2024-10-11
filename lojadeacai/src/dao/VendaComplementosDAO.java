@@ -35,10 +35,7 @@ public class VendaComplementosDAO {
             pst.setInt(1, codigoVenda);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                VendaComplementos vc = new VendaComplementos();
-                vc.setCodigoVenda(rs.getInt("Codigo_Venda"));
-                vc.setCodigoComplemento(rs.getInt("Codigo_Complemento"));
-                vc.setQuantidade(rs.getInt("Quantidade"));
+                VendaComplementos vc = new VendaComplementos ( rs.getInt("Quantidade"), rs.getInt("Codigo_Venda"), rs.getInt("Codigo_Complemento"));
                 vendaComplementos.add(vc);
             }
         } catch (SQLException e) {

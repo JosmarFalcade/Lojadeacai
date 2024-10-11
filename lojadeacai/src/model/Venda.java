@@ -1,14 +1,19 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Venda {
     private int codigo;
     private int codigoCliente;
-    private Date dataVenda;
+    private LocalDate dataVenda;
     private double valorTotal;
 
-    public Venda(int codigo, int codigoCliente, Date dataVenda, double valorTotal) {
+    public Venda() {
+    }
+    
+    
+
+    public Venda(int codigo, int codigoCliente, LocalDate dataVenda, double valorTotal) {
         this.codigo = codigo;
         this.codigoCliente = codigoCliente;
         this.dataVenda = dataVenda;
@@ -31,11 +36,11 @@ public class Venda {
         this.codigoCliente = codigoCliente;
     }
 
-    public Date getDataVenda() {
+    public LocalDate getDataVenda() {
         return dataVenda;
     }
 
-    public void setDataVenda(Date dataVenda) {
+    public void setDataVenda(LocalDate dataVenda) {
         this.dataVenda = dataVenda;
     }
 

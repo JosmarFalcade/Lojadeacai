@@ -6,6 +6,9 @@ public class Cliente {
     private String telefone;
     private String endereco;
 
+    public Cliente (){
+        
+    }
     // Construtor
     public Cliente(int codigo, String nome, String telefone, String endereco) {
         this.codigo = codigo;

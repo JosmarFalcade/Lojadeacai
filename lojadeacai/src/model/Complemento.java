@@ -6,6 +6,10 @@ public class Complemento {
     private String nome;
     private double precoAdicional;
 
+    public Complemento() {
+    }
+
+    
     public Complemento(int codigo, String nome, double precoAdicional) {
         this.codigo = codigo;
         this.nome = nome;
@@ -35,4 +39,6 @@ public class Complemento {
     public void setPrecoAdicional(double precoAdicional) {
         this.precoAdicional = precoAdicional;
     }
+
+  
 }

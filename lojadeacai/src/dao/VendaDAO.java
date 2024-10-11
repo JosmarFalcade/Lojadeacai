@@ -17,7 +17,7 @@ public class VendaDAO {
             Connection con = Conexao.getConexao();
             String sql = "INSERT INTO VENDAS (Codigo_Venda, Codigo_Cliente, Data_Venda, Valor_Total) VALUES (?, ?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setInt(1, v.getCodigoVenda());
+            pst.setInt(1, v.getCodigo());
             pst.setInt(2, v.getCodigoCliente());
             pst.setDate(3, Date.valueOf(v.getDataVenda())); // Assumindo que a data é do tipo LocalDate
             pst.setDouble(4, v.getValorTotal());
@@ -37,7 +37,7 @@ public class VendaDAO {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 Venda v = new Venda();
-                v.setCodigoVenda(rs.getInt("Codigo_Venda"));
+                v.setCodigo(rs.getInt("Codigo_Venda"));
                 v.setCodigoCliente(rs.getInt("Codigo_Cliente"));
                 v.setDataVenda(rs.getDate("Data_Venda").toLocalDate());
                 v.setValorTotal(rs.getDouble("Valor_Total"));
@@ -58,7 +58,7 @@ public class VendaDAO {
             pst.setInt(1, id);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                v.setCodigoVenda(rs.getInt("Codigo_Venda"));
+                v.setCodigo(rs.getInt("Codigo_Venda"));
                 v.setCodigoCliente(rs.getInt("Codigo_Cliente"));
                 v.setDataVenda(rs.getDate("Data_Venda").toLocalDate());
                 v.setValorTotal(rs.getDouble("Valor_Total"));
@@ -77,7 +77,7 @@ public class VendaDAO {
             pst.setInt(1, v.getCodigoCliente());
             pst.setDate(2, Date.valueOf(v.getDataVenda()));
             pst.setDouble(3, v.getValorTotal());
-            pst.setInt(4, v.getCodigoVenda());
+            pst.setInt(4, v.getCodigo());
             pst.executeUpdate();
             System.out.println("Venda atualizada.");
         } catch (SQLException e) {
