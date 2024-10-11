@@ -27,67 +27,96 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMCliente = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jBCliente = new javax.swing.JButton();
+        jBComplemento = new javax.swing.JButton();
+        jBProduto = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(415, 425));
+        setMinimumSize(new java.awt.Dimension(415, 425));
+        getContentPane().setLayout(null);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/açai do ted 6-2.jpg"))); // NOI18N
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        jMenu1.setText("File");
-
-        jMCliente.setText("Cliente");
-        jMCliente.setActionCommand("Cliente");
-        jMCliente.addActionListener(new java.awt.event.ActionListener() {
+        jBCliente.setBackground(new java.awt.Color(91, 195, 241));
+        jBCliente.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBCliente.setForeground(new java.awt.Color(231, 208, 61));
+        jBCliente.setText("Cliente");
+        jBCliente.setToolTipText("");
+        jBCliente.setBorder(null);
+        jBCliente.setBorderPainted(false);
+        jBCliente.setContentAreaFilled(false);
+        jBCliente.setDefaultCapable(false);
+        jBCliente.setFocusPainted(false);
+        jBCliente.setFocusable(false);
+        jBCliente.setRequestFocusEnabled(false);
+        jBCliente.setRolloverEnabled(false);
+        jBCliente.setVerifyInputWhenFocusTarget(false);
+        jBCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClienteActionPerformed(evt);
+                jBClienteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMCliente);
+        getContentPane().add(jBCliente);
+        jBCliente.setBounds(50, 20, 70, 20);
 
-        jMenuItem2.setText("jMenuItem2");
-        jMenu1.add(jMenuItem2);
+        jBComplemento.setBackground(new java.awt.Color(91, 195, 241));
+        jBComplemento.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBComplemento.setForeground(new java.awt.Color(231, 208, 61));
+        jBComplemento.setText("Complemento");
+        jBComplemento.setBorder(null);
+        jBComplemento.setBorderPainted(false);
+        jBComplemento.setContentAreaFilled(false);
+        jBComplemento.setDefaultCapable(false);
+        jBComplemento.setFocusPainted(false);
+        jBComplemento.setFocusable(false);
+        jBComplemento.setRequestFocusEnabled(false);
+        jBComplemento.setRolloverEnabled(false);
+        jBComplemento.setVerifyInputWhenFocusTarget(false);
+        jBComplemento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBComplementoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBComplemento);
+        jBComplemento.setBounds(130, 20, 120, 20);
 
-        jMenuBar1.add(jMenu1);
+        jBProduto.setBackground(new java.awt.Color(91, 195, 241));
+        jBProduto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jBProduto.setForeground(new java.awt.Color(231, 208, 61));
+        jBProduto.setText("Produto");
+        jBProduto.setBorder(null);
+        jBProduto.setBorderPainted(false);
+        jBProduto.setContentAreaFilled(false);
+        jBProduto.setDefaultCapable(false);
+        jBProduto.setFocusPainted(false);
+        jBProduto.setFocusable(false);
+        jBProduto.setRequestFocusEnabled(false);
+        jBProduto.setRolloverEnabled(false);
+        jBProduto.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(jBProduto);
+        jBProduto.setBounds(260, 20, 70, 20);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jLabel2)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/açai do ted 6-2.jpg"))); // NOI18N
+        jLabel1.setMinimumSize(new java.awt.Dimension(480, 480));
+        jLabel1.setPreferredSize(new java.awt.Dimension(400, 420));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 400, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClienteActionPerformed
+    private void jBClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClienteActionPerformed
         // TODO add your handling code here:
-        Cliente c = new Cliente();
+        ClienteView c = new ClienteView();
         c.setVisible(true);
-    }//GEN-LAST:event_jMClienteActionPerformed
+    }//GEN-LAST:event_jBClienteActionPerformed
+
+    private void jBComplementoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBComplementoActionPerformed
+        // TODO add your handling code here:
+        ComplementoView com = new ComplementoView();
+        com.setVisible(true);
+
+    }//GEN-LAST:event_jBComplementoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,12 +154,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenuItem jMCliente;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jBCliente;
+    private javax.swing.JButton jBComplemento;
+    private javax.swing.JButton jBProduto;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

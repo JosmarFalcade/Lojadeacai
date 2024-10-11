@@ -18,5 +18,4 @@ public class Conexao {
         }
         return c;
     }
-as
 }
