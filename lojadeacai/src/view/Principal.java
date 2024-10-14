@@ -33,8 +33,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(415, 425));
-        setMinimumSize(new java.awt.Dimension(415, 425));
+        setMaximumSize(new java.awt.Dimension(400, 415));
+        setMinimumSize(new java.awt.Dimension(400, 415));
         getContentPane().setLayout(null);
 
         jBCliente.setBackground(new java.awt.Color(91, 195, 241));
@@ -49,7 +49,6 @@ public class Principal extends javax.swing.JFrame {
         jBCliente.setFocusPainted(false);
         jBCliente.setFocusable(false);
         jBCliente.setRequestFocusEnabled(false);
-        jBCliente.setRolloverEnabled(false);
         jBCliente.setVerifyInputWhenFocusTarget(false);
         jBCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,7 +56,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jBCliente);
-        jBCliente.setBounds(50, 20, 70, 20);
+        jBCliente.setBounds(40, 20, 70, 20);
 
         jBComplemento.setBackground(new java.awt.Color(91, 195, 241));
         jBComplemento.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -70,7 +69,6 @@ public class Principal extends javax.swing.JFrame {
         jBComplemento.setFocusPainted(false);
         jBComplemento.setFocusable(false);
         jBComplemento.setRequestFocusEnabled(false);
-        jBComplemento.setRolloverEnabled(false);
         jBComplemento.setVerifyInputWhenFocusTarget(false);
         jBComplemento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +76,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jBComplemento);
-        jBComplemento.setBounds(130, 20, 120, 20);
+        jBComplemento.setBounds(120, 20, 120, 20);
 
         jBProduto.setBackground(new java.awt.Color(91, 195, 241));
         jBProduto.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -91,16 +89,15 @@ public class Principal extends javax.swing.JFrame {
         jBProduto.setFocusPainted(false);
         jBProduto.setFocusable(false);
         jBProduto.setRequestFocusEnabled(false);
-        jBProduto.setRolloverEnabled(false);
         jBProduto.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(jBProduto);
-        jBProduto.setBounds(260, 20, 70, 20);
+        jBProduto.setBounds(250, 20, 70, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/açai do ted 6-2.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Açai TED.png"))); // NOI18N
         jLabel1.setMinimumSize(new java.awt.Dimension(480, 480));
         jLabel1.setPreferredSize(new java.awt.Dimension(400, 420));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 400);
+        jLabel1.setBounds(-10, -10, 400, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

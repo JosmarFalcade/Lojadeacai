@@ -21,7 +21,7 @@ public class ClienteView extends javax.swing.JFrame {
      */
     public ClienteView() {
         initComponents();
-        addRowToTable();
+
         jbCadastrarCliente.setVisible(false);
         jbDeletarCliente.setVisible(false);
     }
